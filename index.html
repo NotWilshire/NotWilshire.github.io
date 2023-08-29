@@ -48,8 +48,8 @@
     </header>
 
     <!-- Videos Section Dropdown -->
-    <details id="videos">
-        <summary><h2>Videos</h2></summary>
+    <details id="videoDetails">
+        <summary><h2>Videos <span id="videoArrow">></span></h2></summary>
         <!-- Placeholder for Video 1 -->
         <div>Embed Video 1 Here</div>
         <!-- Placeholder for Video 2 -->
@@ -79,7 +79,19 @@
     <footer>
         © 2023 Wilshire.Studio. All rights reserved.
     </footer>
+
+    <!-- JavaScript for toggling arrow content -->
+    <script>
+        const videoDetails = document.getElementById('videoDetails');
+        const videoArrow = document.getElementById('videoArrow');
+
+        videoDetails.addEventListener('toggle', function() {
+            if (videoDetails.open) {
+                videoArrow.textContent = '\\/';
+            } else {
+                videoArrow.textContent = '>';
+            }
+        });
+    </script>
 </body>
 </html>
-
-
