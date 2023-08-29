@@ -44,7 +44,7 @@
 | | /| / / / / ___/ __ \/ / ___/ _ \  \__ \/ __/ / / / __  / / __ \
 | |/ |/ / / (__  ) / / / / /  /  __/ ___/ / /_/ /_/ / /_/ / / /_/ /
 |__/|__/_/_/____/_/ /_/_/_/   \___(_)____/\__/\__,_/\__,_/_/\____/ 
-                </h1>
+                  </h1>
     </header>
 
     <!-- Videos Section Dropdown -->
@@ -61,8 +61,8 @@
     </details>
 
     <!-- Podcasts Section Dropdown -->
-    <details id="podcasts">
-        <summary><h2>Podcasts</h2></summary>
+    <details id="podcastDetails">
+        <summary><h2>Podcasts <span id="podcastArrow">></span></h2></summary>
         <!-- Placeholder for Podcast 1 -->
         <div>Embed Podcast 1 Here</div>
         <!-- Placeholder for Podcast 2 -->
@@ -84,12 +84,22 @@
     <script>
         const videoDetails = document.getElementById('videoDetails');
         const videoArrow = document.getElementById('videoArrow');
+        const podcastDetails = document.getElementById('podcastDetails');
+        const podcastArrow = document.getElementById('podcastArrow');
 
         videoDetails.addEventListener('toggle', function() {
             if (videoDetails.open) {
                 videoArrow.textContent = '\\/';
             } else {
                 videoArrow.textContent = '>';
+            }
+        });
+
+        podcastDetails.addEventListener('toggle', function() {
+            if (podcastDetails.open) {
+                podcastArrow.textContent = '\\/';
+            } else {
+                podcastArrow.textContent = '>';
             }
         });
     </script>
