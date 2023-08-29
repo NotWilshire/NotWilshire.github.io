@@ -3,133 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wilshire.Studio</title>
-    <style>
-        /* Setting background color for the entire page */
-        body, html {
-            height: 100%;  /* Needed to ensure container can stretch full height */
-            background-color: #202123;
-            margin: 0;
-            font-family: monospace;
-        }
-
-        /* Centered container for the content */
-        .container {
-            width: 960px;
-            height: calc(100% - 50px);  /* Reduce by footer height */
-            margin: 0 auto;
-            background-color: #444654;
-            padding: 20px;
-            box-sizing: border-box;  /* to include padding in the width */
-            display: flex; /* To make the footer stick to the bottom */
-            flex-direction: column;
-        }
-        header {
-    width: 80%;
-    margin: 0 auto;  /* This centers the header horizontally */
-}
-        /* Color for headers */
-        h1 {
-            color: #79c0ff;
-            white-space: pre;  /* Ensures ASCII art formatting is preserved */
-            padding-top: 50px;
-            font-size: 1.5em;
-        }
-
-        h2, h3, h4, h5, h6 {
-            color: #78da80;
-        }
-
-        /* Hide the default arrow for <details> */
-        details > summary::-webkit-details-marker {
-            display: none;
-        }
-
-        details > summary {
-            list-style: none;
-        }
-
-        /* Footer styling */
-        footer {
-            height: 50px;
-            background-color: #202123;
-            color: #FFFFFF;
-            text-align: center;
-            line-height: 50px;  /* Vertically center the text */
-            margin-top: auto;  /* Push it to the bottom of the .container */
-        }
-    </style>
+    <title>Your Name or Brand</title>
+    <link rel="stylesheet" href="path_to_your_styles.css">
 </head>
 <body>
-    <div class="container">
 
-    <!-- Header/Title -->
-    <header>
-        <h1>
- _       ___ __     __    _            _____ __            ___     
-| |     / (_) /____/ /_  (_)_______   / ___// /___  ______/ (_)___ 
-| | /| / / / / ___/ __ \/ / ___/ _ \  \__ \/ __/ / / / __  / / __ \
-| |/ |/ / / (__  ) / / / / /  /  __/ ___/ / /_/ /_/ / /_/ / / /_/ /
-|__/|__/_/_/____/_/ /_/_/_/   \___(_)____/\__/\__,_/\__,_/_/\____/ 
-                  </h1>
-    </header>
+<!-- Top Navigation Bar -->
+<nav>
+    <div class="logo">Your Logo Here</div>
+    <ul>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#blog">Blog/Workflows</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
 
-      <!-- Videos Section Dropdown -->
-    <details id="videoDetails">
-        <summary><h2>Videos <span id="videoArrow">></span></h2></summary>
-        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/BWsI7HYm2mI?si=H9NvoHH_g2jXU7OR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        <div>Embed Video 1 Here</div>
-        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/7-kq4P2wbDM?si=9Mjv2YdUlJwrxf_Z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        <div>Embed Video 2 Here</div>
-        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/PU4WjhGhAGU?si=CfNyi1WBaMRg8WN0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        <div>Embed Video 3 Here</div>
-        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/tOYeV6Xu4u0?si=xyuKqVmgBSHJJvjh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        <div>Embed Video 4 Here</div>
-    </details>
+<!-- Main Feature -->
+<section class="hero">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/BWsI7HYm2mI?si=FaqsGvFE2msDuBlz" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+    <h1>Your Main Feature Title</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in.</p>
+</section>
 
-    <!-- Podcasts Section Dropdown -->
-    <details id="podcastDetails">
-        <summary><h2>Podcasts <span id="podcastArrow">></span></h2></summary>
-        <!-- Placeholder for Podcast 1 -->
-        <div>Embed Podcast 1 Here</div>
-        <!-- Placeholder for Podcast 2 -->
-        <div>Embed Podcast 2 Here</div>
-        <!-- Placeholder for Podcast 3 -->
-        <div>Embed Podcast 3 Here</div>
-        <!-- Placeholder for Podcast 4 -->
-        <div>Embed Podcast 4 Here</div>
-    </details>
-
-    <!-- More sections as needed... -->
-
-    <!-- Footer -->
-    <footer>
-        © 2023 Wilshire.Studio. All rights reserved.
-    </footer>
+<!-- Stories Grid -->
+<section class="stories-grid">
+    <div class="story">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/BWsI7HYm2mI?si=FaqsGvFE2msDuBlz" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+        <h2>Video Title 1</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     </div>
+    <!-- Repeat similar blocks for other videos/stories -->
+</section>
 
-    <!-- JavaScript for toggling arrow content -->
-    <script>
-        const videoDetails = document.getElementById('videoDetails');
-        const videoArrow = document.getElementById('videoArrow');
-        const podcastDetails = document.getElementById('podcastDetails');
-        const podcastArrow = document.getElementById('podcastArrow');
+<!-- Footer -->
+<footer>
+    <p>© 2023 by Your Name or Brand. All rights reserved.</p>
+    <div class="social-icons">
+        <!-- Add links to your social media profiles here -->
+    </div>
+</footer>
 
-        videoDetails.addEventListener('toggle', function() {
-            if (videoDetails.open) {
-                videoArrow.textContent = '\\/';
-            } else {
-                videoArrow.textContent = '>';
-            }
-        });
-
-        podcastDetails.addEventListener('toggle', function() {
-            if (podcastDetails.open) {
-                podcastArrow.textContent = '\\/';
-            } else {
-                podcastArrow.textContent = '>';
-            }
-        });
-    </script>
 </body>
 </html>
