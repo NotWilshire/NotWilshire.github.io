@@ -1,94 +1,54 @@
-/* Global Styles */
 body {
-    background-color: #1E1E2F;
-    color: #E9E9EB;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #282828;
+    color: #D3D0CB;
     margin: 0;
     padding: 0;
-    line-height: 1.6;
+    font-size: 16px;
+    line-height: 1.5;
 }
 
-/* Header Styles */
-header {
-    background-color: #2B2B3B;
-    padding: 1em 5%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.container {
+    width: 960px;
+    margin: 0 auto;
+    text-align: right;
 }
 
-header h1 {
-    color: #C2936D;
+header, .hero, section, footer {
+    text-align: center;
+    padding: 20px;
+}
+
+h1, h2, h3 {
     margin: 0;
+    color: #A89B91;
 }
 
-nav a {
-    margin: 0 10px;
-    color: #E9E9EB;
+a {
+    color: #D3D0CB;
     text-decoration: none;
+    padding: 10px;
     transition: color 0.3s;
 }
 
-nav a:hover {
-    color: #C2936D;
-}
-
-/* Hero Section Styles */
-.hero {
-    padding: 5% 5%;
-    background-color: #2B2B3B;
-    text-align: center;
-}
-
-.hero h2 {
-    font-size: 2em;
-    color: #C2936D;
-    margin-bottom: 1em;
+a:hover {
+    color: #F2EBDF;
 }
 
 .tagline {
+    margin-top: 20px;
     font-style: italic;
-    margin-bottom: 2em;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
-.explore a {
-    display: inline-block;
-    background-color: #C2936D;
-    color: #1E1E2F;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+.explore {
+    margin-top: 30px;
 }
 
-.explore a:hover {
-    background-color: #E9E9EB;
-    color: #1E1E2F;
+iframe {
+    margin-top: 20px;
 }
 
-/* Footer Styles */
 footer {
-    background-color: #2B2B3B;
-    text-align: center;
-    padding: 1em 0;
-    font-size: 0.9em;
-}
-
-/* Responsive Adjustments */
-@media only screen and (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav a {
-        margin-bottom: 0.5em;
-    }
-
-    .tagline {
-        padding: 0 5%;
-    }
+    margin-top: 40px;
+    font-size: 14px;
 }
