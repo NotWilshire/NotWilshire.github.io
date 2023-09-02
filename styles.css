@@ -1,0 +1,179 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #222831;
+    color: #EEEEEE;
+    margin: 0;
+    padding-left: 20px;  /* 20px padding on the left */
+    font-size: 16px;
+    line-height: 1.75;
+}
+
+
+.container {
+    width: 960px;
+    margin-left: 0;  /* Remove the left margin */
+    text-align: left;
+}
+
+header, .hero, section, footer {
+    text-align: left;
+    padding: 20px;
+}
+/* Reduce or remove margin and padding to bring the navigation closer to the top */
+header nav {
+    margin-top: 5px; /* Adjust as needed */
+    padding: 0;
+}
+
+/* Add a "|" before each navigation item except the first one */
+header nav a:not(:first-child)::before {
+    content: "|";
+    margin-left: -10px; /* Pulls the pipe symbol to the left */
+    margin-right: 15px;  /* Space after the pipe symbol */
+    color: inherit; /* Ensures the "|" matches the link color */
+}
+
+h2, h3 {
+    margin: 0;
+    color: #00ADB5;
+}
+
+h1 {
+    font-size: 2.5em;  /* Adjust as necessary */
+    margin: 0;
+    color: #00ADB5;
+}
+
+
+a {
+    color: #EEEEEE;
+    text-decoration: none;
+    margin-left: 0px;  /* Adjust as needed for spacing between links */
+    margin-right: 20px; /* Adjust as needed for spacing between links */
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #00ADB5;
+}
+
+.tagline {
+    margin-top: 20px;
+    font-style: ;
+}
+
+.explore {
+    margin-top: 30px;
+}
+
+iframe {
+    margin-top: 20px;
+}
+section {
+    padding-bottom: 50px;
+}
+
+footer {
+    margin-top: 200px;
+    font-size: 14px;
+}
+.video-section {
+    display: flex;
+    align-items: center;  /* Centers child elements vertically */
+    gap: 60px; /* Space between the video and text */
+}
+
+.video-container {
+    order: 1; /* This will ensure that the video container is on the left */
+    padding-right: 30px; /* Adds 30px padding to the right of the video */
+}
+
+.text-container {
+    order: 2;
+    flex: 1; /* This will make the text container take the remaining space */
+    text-align: left;  /* Right-aligns the text content */
+}
+
+.video2-section {
+    display: flex;
+    align-items: center;  /* Centers child elements vertically */
+    gap: 30px; /* Space between the video and text */
+}
+
+.video2-container {
+    order: 2; /* This will ensure that the video container is on the left */
+    padding-right: 30px; /* Adds 30px padding to the right of the video */
+}
+
+.text2-container {
+    order: 1;
+    flex: 1; /* This will make the text container take the remaining space */
+    text-align: left;  /* Right-aligns the text content */
+}
+#Motion Graphics {
+    text-align: right;
+}
+
+#Motion Graphics h3, #Motion Graphics p {
+    margin-bottom: 50px;
+}
+
+.photo-row img {
+    height: 300px;
+    /* If you want a gap between the photos, you can add a margin-right */
+    margin-right: 10px;
+}
+
+/* To ensure the last photo doesn't have extra margin */
+.photo-row img:last-child {
+    margin-right: 0;
+}
+
+
+.video-gallery {
+    display: flex;
+    gap: 60px; /* Space between two columns */
+    align-items: center; /* Vertically centers the video columns */
+    width: 100%; /* Ensures the container spans the full width of its parent */
+    padding-left: 0px; /* Adds 20px padding to the left */
+}
+
+.video-column {
+    display: flex;
+    flex-direction: column;
+    gap: 0px; /* Gap between video entries */
+}
+
+.video-entry {
+    display: flex;
+    flex-direction: column; /* Stack video and title vertically */
+    gap: 0px; /* Space between the video and its title */
+}
+
+.video-entry p {
+    text-align: left; /* Left-aligns the title */
+    margin-bottom: -15px; /* Space below the title */
+}
+
+.video-entry p:first-child {
+    font-weight: bold;
+    color: #00ADB5;
+}
+
+
+.video-entry iframe {
+    margin-bottom: 30px; /* Space below the video */
+}
+
+
+#Inbound Marketing Precision {
+    text-align: right; /* Right-aligns the entire section content */
+}
+
+/* If you want to specifically target the content inside .text2-container */
+#Inbound Marketing Precision .text2-container {
+    text-align: right; /* Right-aligns the content inside .text2-container */
+}
+
+
+
