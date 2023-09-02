@@ -134,10 +134,33 @@
                 <p></p>
             </section>        
 
-        <section id="contact">
+        <section id="contact2">
             <div class="text2-container">
             <h3>Contact Me</h3>
             <p>For inquiries, please fill out the form below. I'm looking forward to working with you!</p>
+            <!-- modify this form HTML and place wherever you want your form -->
+            <div id="contact">
+                <div id="contact-form">
+                    <form action="https://formspree.io/f/mbjvyoky" method="POST">
+                        <input type="hidden" name="_subject" value="Contact request from personal website" />
+                        <label for="email">Email:</label>
+                        <input type="email" name="_replyto" id="email" placeholder="Email" required>
+                        
+                        <label for="name">Name:</label>
+                        <input type="text" name="name" id="name" placeholder="Name" required>
+            
+                        <label for="company-name">Company Name:</label>
+                        <input type="text" name="company-name" id="company-name" placeholder="Company Name" required>
+            
+                        <label for="message">Message:</label>
+                        <textarea name="message" id="message" placeholder="Let me hear from you." required></textarea>
+            
+                        <button type="submit">Send</button>
+                    </form>
+                </div>
+            </div>
+            
+            
             <!-- You can add a contact form here -->
         </div>
         </section>
