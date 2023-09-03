@@ -234,6 +234,8 @@ h4, .videography h4, #motiongraphics h4, #audioproduction .video-entry h4 {
     font-weight: bold;
 }
 
+
+
 /* =================== */
 /* Marketing Section */
 /* =================== */
@@ -364,3 +366,81 @@ h4 {
 p {
     font-family: 'Inter', sans-serif;
 }
+
+
+
+/* =================== */
+/* Future Sections Placeholders */
+/* =================== */
+
+/* Add your future styles below for consistency and uniformity. */
+
+/* Testimonials Section */
+/* =================== */
+/* Add styling for testimonials if you plan to include this in the future. */
+
+/* Services Section */
+/* =================== */
+/* If you provide different services, you can add styles for a services section. */
+
+/* Blog or News Section */
+/* =================== */
+/* If you plan to include a blog or news section, you can add styles here. */
+
+/* About Me Section */
+/* =================== */
+/* If you plan to add a personal bio or "About Me" section, include styles here. */
+
+/* Gallery or Portfolio Grid Section */
+/* =================== */
+/* If you plan to expand your portfolio with a grid layout, include styles here. */
+
+/* Pricing or Packages Section */
+/* =================== */
+/* If you offer different packages or pricing tiers, include styles for that here. */
+
+/* FAQ Section */
+/* =================== */
+/* If you plan to add a frequently asked questions section, include styles here. */
+
+/* Call to Action Section */
+/* =================== */
+/* If you have a specific action you want visitors to take, style a CTA section. */
+
+/* =================== */
+/* Mobile Responsive Styles */
+/* =================== */
+
+@media only screen and (max-width: 768px) {
+    /* Move nav bar to the top right-hand corner */
+    nav {
+        width: auto;
+        position: relative;
+    }
+    
+    /* Dropdown menu styles */
+    nav ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: #14151a;
+        z-index: 100;
+    }
+
+    nav:hover ul {
+        display: block;
+    }
+
+    nav li {
+        display: block;
+        text-align: left;
+    }
+    
+    /* Allow stacking of columns */
+    .column {
+        width: 100% !important;
+        display: block;
+    }
+}
+
