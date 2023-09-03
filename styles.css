@@ -482,3 +482,56 @@ p {
 
     /* Add any other mobile-specific styles here */
 }
+
+
+/* =================== */
+/* Enhanced Responsive Styles for Mobile Devices */
+/* =================== */
+@media only screen and (max-width: 768px) {
+
+    /* Adjust container and layout styles for mobile */
+    .container, header nav, .hero-content, .video-editing-section {
+        max-width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    /* Adjust navigation for mobile, assuming a horizontal navigation */
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    /* Adjust font sizes for mobile for better readability */
+    body {
+        font-size: 14px;
+    }
+    
+    h1, h2, h3, h4 {
+        font-size: 85%;  /* Reducing title sizes for mobile */
+    }
+
+    /* Make videos and iframes responsive */
+    iframe, video {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Ensure background images cover the full viewport width */
+    .hero {
+        background-size: cover;
+        background-position: center center;
+    }
+    
+    /* Text containers, to ensure text wraps and doesn't overflow */
+    .text-container, .videography .text-container, 
+    #motiongraphics .text2-container, #audioproduction .text2-container, 
+    #marketing .text2-container {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+}
+
