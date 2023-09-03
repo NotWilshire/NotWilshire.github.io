@@ -90,8 +90,18 @@ a:hover {
     color: white;
     padding-top: 0;
     position: relative;
-    padding: 200px;
+    padding: 200px 0; /* Modified padding to keep top and bottom as before */
     z-index: 1;
+    display: flex; /* Added flex to center the text container */
+    justify-content: center; /* Centering horizontally */
+    align-items: center; /* Centering vertically */
+}
+
+.hero-text-container { /* New text container style */
+    width: 560px;
+    text-align: left; /* Assuming you want the text left-aligned */
+    z-index: 2;
+    position: relative;
 }
 
 .hero h1, .hero h3, .hero p {
