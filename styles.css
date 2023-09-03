@@ -1,55 +1,78 @@
+/* =================== */
+/* Global Styles */
+/* =================== */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
 body {
     font-family: 'Open Sans', sans-serif;
     background-color: #14151a;
     color: #EEEEEE;
     margin: 0;
-    padding-left: 20px;  /* 20px padding on the left */
+    padding-left: 0;
     font-size: 16px;
     line-height: 1.75;
 }
 
 
-.container {
-    width: 960px;
-    margin-left: 0;  /* Remove the left margin */
+
+/* Using Anton font */
+.anton-font {
+    font-family: 'Anton', sans-serif;
+}
+
+/* Using Lora Semi Bold font */
+.lora-font {
+    font-family: 'Lora', serif;
+    font-weight: 600; /* Semi Bold */
+}
+
+/* =================== */
+/* Layout Styles */
+/* =================== */
+.container, header nav, .hero-content {
+    max-width: 960px;
+    margin: 0 auto;
     text-align: left;
 }
 
-header, .hero, section, footer {
-    text-align: left;
+.container {
+    min-height: calc(100% - 100px);  /* Adjust this value if your footer height changes */
+    display: flex;
+    flex-direction: column;
+}
+
+header, .hero, section, .hero-content {
     padding: 20px;
 }
-/* Reduce or remove margin and padding to bring the navigation closer to the top */
-header nav {
-    margin-top: 5px; /* Adjust as needed */
-    padding: 0;
+
+/* =================== */
+/* Navigation Bar Styles */
+/* =================== */
+nav {
+    width: calc(100% - 40px);
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
-/* Add a "|" before each navigation item except the first one */
+header nav {
+    margin-top: 5px;
+}
+
 header nav a:not(:first-child)::before {
     content: "|";
-    margin-left: -10px; /* Pulls the pipe symbol to the left */
-    margin-right: 15px;  /* Space after the pipe symbol */
-    color: inherit; /* Ensures the "|" matches the link color */
+    margin-left: -10px;
+    margin-right: 15px;
+    color: inherit;
 }
-
-h2, h3 {
-    margin: 0;
-    color: #00ADB5;
-}
-
-h1 {
-    font-size: 2.5em;  /* Adjust as necessary */
-    margin: 0;
-    color: #00ADB5;
-}
-
 
 a {
     color: #EEEEEE;
     text-decoration: none;
-    margin-left: 0px;  /* Adjust as needed for spacing between links */
-    margin-right: 20px; /* Adjust as needed for spacing between links */
+    margin-right: 20px;
     transition: color 0.3s;
 }
 
@@ -57,158 +80,214 @@ a:hover {
     color: #00ADB5;
 }
 
-.tagline {
-    margin-top: 20px;
-    font-style: ;
+/* =================== */
+/* Hero Section Styles */
+/* =================== */
+.hero {
+    background-image: url('/Wizards/Digital.png');
+    background-size: cover;
+    background-position: 50% top;
+    color: white;
+    padding-top: 0;
+    position: relative;
+    padding: 200px;
+    z-index: 1;
 }
 
-.explore {
-    margin-top: 30px;
+.hero h1, .hero h3, .hero p {
+    z-index: 2;
+    position: relative;
 }
 
-iframe {
-    margin-top: 20px;
-}
-section {
-    padding-bottom: 50px;
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 0;
 }
 
-footer {
-    margin-top: 200px;
-    font-size: 14px;
-}
-.video-section {
+/* =================== */
+/* Portfolio Section Styles */
+/* =================== */
+
+/* =================== */
+/* Video Editing Section Styling */
+/* =================== */
+.video-editing-section {
+    background-color: black;
+    padding: 50px 0;
     display: flex;
-    align-items: center;  /* Centers child elements vertically */
-    gap: 60px; /* Space between the video and text */
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+}
+
+.video-editing-section iframe {
+    border: none;
+}
+
+h4, .videography h4, #motiongraphics h4, #audioproduction .video-entry h4 {
+    margin: 20px 0;
+    color: #7e7e7e;
+    text-align: left;
+    width: 560px;
+}
+
+.text-container, .videography .text-container, #motiongraphics .text2-container, #audioproduction .text2-container, #marketing .text2-container {
+    width: 560px;
+    margin: 0 auto;
 }
 
 .video-container {
-    order: 1; /* This will ensure that the video container is on the left */
-    padding-right: 30px; /* Adds 30px padding to the right of the video */
-}
-
-.text-container {
-    order: 2;
-    flex: 1; /* This will make the text container take the remaining space */
-    text-align: left;  /* Right-aligns the text content */
-}
-
-.video2-section {
     display: flex;
-    align-items: center;  /* Centers child elements vertically */
-    gap: 30px; /* Space between the video and text */
+    justify-content: center;
+    align-items: center;
+    width: 560px;
+    margin-bottom: -10px;
 }
 
-.video2-container {
-    order: 2; /* This will ensure that the video container is on the left */
-    padding-right: 30px; /* Adds 30px padding to the right of the video */
+/* =================== */
+/* Videography Section */
+/* =================== */
+.videography {
+    background-color:  #14151a;
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+}
+
+.videography .videography-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 560px;
+    margin-bottom: -10px;
+}
+
+/* =================== */
+/* Motion Graphics Section */
+/* =================== */
+#motiongraphics {
+    background-color: #000000;
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+}
+
+#motiongraphics .photo-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+#motiongraphics .video-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 5px;
+}
+
+#motiongraphics .lottie-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* =================== */
+/* Audio Production Section */
+/* =================== */
+#audioproduction {
+    background-color: #14151a; /* Black background color */
+    padding: 50px 0;
+    max-width: 960px;  /* Constraint to 960px */
+    margin: 0 auto;   /* Center the section */
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center;
+    text-align: left; /* Left-align all text in this section */
+}
+
+#audioproduction .video-gallery {
+    display: flex;
+    justify-content: space-between;
+    width: 560px;
+    margin: 20px auto;
+}
+
+#audioproduction .video-column {
+    width: 50%;
+}
+
+#audioproduction .video-entry p {
+    font-size: 16px;
+    color: #ffc400;
+    font-weight: bold;
+}
+
+/* =================== */
+/* Marketing Section */
+/* =================== */
+#marketing {
+    background-color: #000000; /* Black background color */
+    padding: 50px 0;
+    max-width: 960px;  /* Constraint to 960px */
+    margin: 0 auto;   /* Center the section */
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center;
+    text-align: left; /* Left-align all text in this section */
+}
+
+
+#marketing h3 {
+    color: #ffc400;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#marketing p {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+/* =================== */
+/* Contact Form Styles */
+/* =================== */
+
+#contact2 {
+    padding: 20px 0;
+    max-width: 960px;  /* Constrain the entire section to 960px */
+    margin: 0 auto;    /* Center the section */
+    background-color: #000000; /* Apply the black background here */
 }
 
 .text2-container {
-    order: 1;
-    flex: 1; /* This will make the text container take the remaining space */
-    text-align: left;  /* Right-aligns the text content */
+    width: 560px;      /* Constrain the content to 560px */
+    margin: 0 auto;    /* Center the content */
+    text-align: left;
+    padding: 20px 0;   /* Adjust padding as needed */
 }
-#Motion Graphics {
-    text-align: right;
-}
-
-#Motion Graphics h3, #Motion Graphics p {
-    margin-bottom: 50px;
-}
-
-.photo-row img {
-    height: 300px;
-    /* If you want a gap between the photos, you can add a margin-right */
-    margin-right: 10px;
-}
-
-/* To ensure the last photo doesn't have extra margin */
-.photo-row img:last-child {
-    margin-right: 0;
-}
-
-
-.video-gallery {
-    display: flex;
-    gap: 60px; /* Space between two columns */
-    align-items: center; /* Vertically centers the video columns */
-    width: 100%; /* Ensures the container spans the full width of its parent */
-    padding-left: 0px; /* Adds 20px padding to the left */
-}
-
-.video-column {
-    display: flex;
-    flex-direction: column;
-    gap: 0px; /* Gap between video entries */
-}
-
-.video-entry {
-    display: flex;
-    flex-direction: column; /* Stack video and title vertically */
-    gap: 0px; /* Space between the video and its title */
-}
-
-.video-entry p {
-    text-align: left; /* Left-aligns the title */
-    margin-bottom: -15px; /* Space below the title */
-}
-
-.video-entry p:first-child {
-    font-weight: bold;
-    color: #00ADB5;
-}
-
-
-.video-entry iframe {
-    margin-bottom: 30px; /* Space below the video */
-}
-
-
-#Inbound Marketing Precision {
-    text-align: right; /* Right-aligns the entire section content */
-}
-
-/* If you want to specifically target the content inside .text2-container */
-#Inbound Marketing Precision .text2-container {
-    text-align: right; /* Right-aligns the content inside .text2-container */
-}
-
-.photo-row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column; /* Stacks items vertically */
-    gap: 30px; /* Space between items */
-}
-
-.video-row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px; /* Space between videos */
-}
-
-lottie-player {
-    align-self: center; /* Centers the lottie player */
-}
-
 
 #contact-form {
-    width: 500px;
-}
-
-#contact-form form {
+    width: 100%;       /* Use the full width of .text2-container */
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
 }
 
-#contact-form label,
-#contact-form input,
-#contact-form textarea {
+#contact-form input, #contact-form textarea {
     width: 100%;
     text-align: left;
 }
@@ -219,8 +298,8 @@ lottie-player {
 
 #contact-form button {
     align-self: flex-start;
-    width: auto; /* Resets the button's width */
-    padding: 10px 20px; /* Adds some padding to the button */
+    width: auto;
+    padding: 10px 20px;
     background-color: #00ADB5;
     color: #EEEEEE;
     border: none;
@@ -229,5 +308,59 @@ lottie-player {
 }
 
 #contact-form button:hover {
-    background-color: #0098a1;  /* A slightly darker shade for hover */
+    background-color: #0098a1;
+}
+
+/* =================== */
+/* Footer */
+/* =================== */
+#footer {
+    background-color: #000000; /* Black background color */
+    padding: 10px 0; /* Reduced padding from 50px to 10px */    
+    max-width: 960px;  /* Constraint to 960px */
+    margin: 0 auto;   /* Center the section */
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center;
+    text-align: left; /* Left-align all text in this section */
+    color: #7e7e7e; /* Set the text color */
+}
+
+
+
+/* =================== */
+/* Miscellaneous Styles */
+/* =================== */
+h1, h2 {
+    font-family: 'Oswald', sans-serif;
+    margin: 0;
+    color: #ffc400;
+    text-transform: uppercase;
+    font-size: 2em;
+}
+
+h3 {
+    font-family: 'Lora', serif;
+    font-weight: 600;
+    font-style: italic;
+    margin: 0;
+    color: #ffc400;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+.tagline, .explore, iframe, footer {
+    margin-top: 20px;
+}
+
+h4 {
+    font-family: 'Lora', serif;
+    font-weight: 600;
+    font-style: italic;
+}
+
+p {
+    font-family: 'Inter', sans-serif;
 }
