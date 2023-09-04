@@ -110,8 +110,6 @@ h4 {
 }
 
 
-
-
 .hero {
     background-image: url('/Wizards/Digital.png');
     background-size: cover;
@@ -179,9 +177,13 @@ section {
     /* Add any additional styling you want for these sections */
 }
 
+iframe {
+    border: none;
+}
 
 
 /* Add padding to videos */
+@media (max-width: 769px) {
 .videocontainer {
     position: relative;
     padding-bottom: 45%; /* 16:9 aspect ratio (height / width) */
@@ -199,9 +201,6 @@ section {
     height: 100%;
 }
 
-iframe {
-    border: none;
-}
 
 /* Style for video gallery */
 .video-entry {
@@ -210,6 +209,7 @@ iframe {
     overflow: hidden;
     padding-left: 10vw; /* Add left padding */
     padding-right: 10vw; /* Add right padding */
+    margin-bottom: 10px;
 }
 
 .video-entry iframe {
@@ -221,12 +221,21 @@ iframe {
     height: 100%;
 }
 
-/* Add this CSS to your existing styles.css */
+.video-entry-container h4 {
+    margin: 0;
+    text-align: left;
+    padding-left: 10vw; /* Match the left padding of video-entry */
+    padding-right: 10vw; /* Match the right padding of video-entry */
+    margin-bottom: 20px;
+}
 
-/* Add this CSS to your existing styles.css */
+
+
+
+}
 
 /* Media query for larger screens (width over 768px) */
-@media (min-width: 769px) {
+@media (min-width: 768px) {
     /* Limit the maximum width of videos */
     .videocontainer {
         position: relative;
@@ -247,22 +256,46 @@ iframe {
     }
 
     /* Style for video gallery */
-.video-entry {
-    position: relative;
-    padding-bottom: 32.6%; /* 16:9 aspect ratio (height / width) */
-    overflow: hidden;
-    padding-left: 10vw; /* Add left padding */
-    padding-right: 10vw; /* Add right padding */
-}
 
-.video-entry iframe {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%); /* Center the video horizontally */
-    width: 58%;
-    height: 100%;
+    .video-section {
+        padding: 20px;
+    }
+    
+    .video-gallery {
+        display: flex;
+        gap: 20px;
+    }
+    
+    .video-column1,
+    .video-column2 {
+        flex: 1;
+    }
+    
+    .video-entry {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: 0;
+        padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    }
+    
+    .video-entry iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .video-entry-container h4 {
+        margin-bottom: 30px;
 }
+        
+
+    
+    
+    
+    
+
 
     /* Limit the maximum width of text containers */
     .text-container {
@@ -287,6 +320,41 @@ iframe {
         margin: 0 auto ; /* Adjust the margin to 10px to keep 10px gap */
     }
 
+}
+
+#marketing .text-container {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+}
+
+#marketing .block {
+    display: flex;
+    align-items: flex-start; /* Align items to the top left corner */
+    margin-bottom: 20px;
+}
+
+#marketing .lottie-icon {
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+    margin-top: 4px; /* Adjust the top margin to align with h3 headers */
+}
+
+#marketing .text {
+    flex: 1;
+}
+
+#marketing h2 {
+    margin-top: 0;
+}
+
+#marketing h3 {
+    margin-top: 0;
+}
+
+#marketing p {
+    margin-bottom: 0;
 }
 
 
@@ -342,4 +410,5 @@ footer {
     width: 100%;
     margin-top: auto; /* Pushes the footer to the bottom */
 }
+
 
