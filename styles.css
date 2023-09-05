@@ -371,7 +371,9 @@ iframe {
     background-color: transparent; /* Set the button background color to transparent */
     color: #ffc400; /* Set the button text color to ffc400 */
     text-decoration: none;
-    font-weight: bold;
+    font-family: 'Lora', serif;
+    font-weight: 600;  /* SemiBold */
+    font-style: italic;
     border-radius: 0; /* Square off the edges */
     border: 1px solid #ffc400; /* Add a thin outline in ffc400 */
     margin-top: 20px; /* Add top margin for spacing */
