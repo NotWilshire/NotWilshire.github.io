@@ -532,5 +532,145 @@ To do this, you can add a relative positioning and z-index to the .text-containe
 
 
 
+
+/* AI SECTION */
+
+
+#ai {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.blog-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 560px;
+}
+
+.blog-card {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+.img-title-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.blog-card img {
+    width: 100px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.blog-card .blog-content {
+    flex: 1;
+}
+
+.blog-card h2 {
+    margin: 0;
+}
+
+.blog-card p {
+    margin: 10px 0;
+    flex: 1;
+}
+
+.blog-card .learn-more {
+    align-self: flex-end; /* This is to align the "Learn more" to the right */
+    color: #ffc400;
+    text-decoration: none;
+}
+
+.blog-card .learn-more:hover {
+    text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+    .blog-card {
+        width: 560px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
+/* Existing styles */
+input, textarea {
+    /* Common styles for input fields and textarea */
+    width: 100%;  /* Default to full width on smaller screens */
+    box-sizing: border-box; /* Ensure padding doesn't add extra width */
+    padding: 10px;  /* Adjust this if you want more/less padding inside the fields */
+    margin-bottom: 10px; /* Add some space between the fields */
+    border: 1px solid #ccc;  /* A basic border, you can style it your way */
+    border-radius: 4px;  /* Optional, rounds the corners */
+}
+
+#contact #message {
+    height: 150px;
+}
+
+button {
+    cursor: pointer;  /* Makes it obvious it's a clickable button */
+    padding: 10px 20px;  /* Adjust to your liking */
+    background-color: #333;  /* Some color, adjust to your theme */
+    color: #fff;  /* Text color on the button */
+    border: none;
+    border-radius: 4px;  /* Optional, rounds the corners */
+    transition: background-color 0.3s;  /* Optional, smooth color change */
+}
+
+button:hover {
+    background-color: #555;  /* Darker shade on hover */
+}
+
+/* Media query */
+@media (min-width: 768px) {
+    input, textarea {
+        max-width: 560px;  /* Input fields and textarea will not grow beyond this width */
+    }
+}
+
 
