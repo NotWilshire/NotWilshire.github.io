@@ -150,7 +150,7 @@ h4 {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.6);
     z-index: 0;
 }
 
@@ -159,8 +159,8 @@ h4 {
 /* Add this CSS to your existing styles.css */
 
 section {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
 
 .text-container {
@@ -311,10 +311,12 @@ iframe {
     #motiongraphics,
     #audioproduction,
     #marketing,
+    #Testimonials,
+    #AI,
     #contact,
     #footer {
         max-width: 960px;
-        margin: 0 auto 10px; /* Adjust the margin to 10px to keep 10px gap */
+        margin: 0 auto 0px; /* Adjust the margin to 10px to keep 10px gap */
     }
 
     .hero{
@@ -413,4 +415,122 @@ footer {
     margin-top: auto; /* Pushes the footer to the bottom */
 }
 
+
+/* styles.css */
+
+
+#Testimonials {
+    background-image: url('/Wizards/ThumbsUpWiz.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+
+#Testimonials::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3); /* This adds a black overlay with 60% opacity */
+    z-index: 1; /* Ensures the overlay sits below the content but above the background image */
+}
+
+/* You will also want to ensure that your content sits above the overlay. 
+To do this, you can add a relative positioning and z-index to the .text-container class */
+
+.text-container {
+    position: relative;
+    z-index: 2; /* This ensures that the content sits above the overlay */
+}
+
+
+
+/* Add these CSS rules to your existing stylesheet */
+
+  /* Add these CSS rules to your existing stylesheet */
+  .testimonial-slider {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    margin-bottom: 50px; /* Add this line */
+}
+
+
+.testimonial-container {
+    position: absolute;  /* This ensures all testimonials stack on top of each other */
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 2s, visibility 2s;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+
+.show {
+    visibility: visible;  /* now visible */
+    opacity: 1;  
+}
+  
+.testimonial-box {
+    background-color: black;
+    color: white;
+    box-shadow: 0px 8px 20px rgba(1, 1, 1, 1);
+    padding: 20px;
+    box-sizing: border-box;
+    width: 300px;  /* Adjust as necessary */
+    height: 400px; /* Adjust as necessary */
+    overflow: hidden; 
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.testimonial-photo img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 10px 0;
+}
+  
+.dot-container {
+    text-align: center;
+    position: absolute;
+    bottom: -60px; /* Adjust from -40px to -60px to consider the dot's height */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;  
+}
+
+
+
+.dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: lightgray;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+  
+.dot.active {
+    background-color: #ffc400;
+}
+
+
+
+  
 
